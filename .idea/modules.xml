@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/ItPatagoniaFinal.iml" filepath="$PROJECT_DIR$/.idea/ItPatagoniaFinal.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-service/config-service/config-service.iml" filepath="$PROJECT_DIR$/config-service/config-service/config-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/gateway/gateway.iml" filepath="$PROJECT_DIR$/gateway/gateway.iml" />
+      <module fileurl="file://$PROJECT_DIR$/student/student.iml" filepath="$PROJECT_DIR$/student/student.iml" />
+      <module fileurl="file://$PROJECT_DIR$/subject/subject.iml" filepath="$PROJECT_DIR$/subject/subject.iml" />
+    </modules>
+  </component>
+</project>
