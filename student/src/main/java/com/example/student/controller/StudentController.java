@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Map;
 
 @RestController
 @RequestMapping("/students")
@@ -32,6 +33,12 @@ public class StudentController {
     public ResponseEntity<Subject> saveSubject(@PathVariable("studentId") Long studentId, @RequestBody Subject subject) {
         Subject subjectNew = studentService.saveSubject(studentId, subject);
         return ResponseEntity.ok(subject);
+    }
+
+    @GetMapping("/getAll/{studentId}")
+    public ResponseEntity<Map<String, Object>> getAll(@PathVariable("studentId") Long studentId){
+        Map<String, Object> datos = studentService.getAll(studentId);
+        return ResponseEntity.ok(datos);
     }
 
 }

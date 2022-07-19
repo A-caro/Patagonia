@@ -8,7 +8,7 @@ import com.example.student.repository.StudentRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.List;
+import java.util.*;
 
 @Service
 public class StudentService {
@@ -31,6 +31,15 @@ public class StudentService {
         subject.setStudentId(studentId);
         Subject subjectNew = subjectFeignClient.saveSubject(subject);
         return subjectNew;
+    }
+
+    public Map<String, Object> getAll(Long studentId){
+        Map<String, Object> datos = new HashMap<>();
+        Student student = studentRepository.findById(studentId).orElse(null);
+        datos.put("Student", student);
+        List<Subject> subjects = subjectFeignClient.getSubjects(studentId);
+        datos.put("Subjects", subjects);
+        return datos;
     }
 
 
