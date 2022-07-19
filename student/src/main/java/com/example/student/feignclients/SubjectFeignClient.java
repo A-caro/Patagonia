@@ -15,7 +15,7 @@ public interface SubjectFeignClient {
     @PostMapping
     Subject saveSubject(@RequestBody Subject subject);
 
-    @GetMapping("/byStudent/{studentId}")
+    @GetMapping("/getAll/{studentId}")
     List<Subject> getSubjects(@PathVariable("studentId") Long studentId);
 
 
