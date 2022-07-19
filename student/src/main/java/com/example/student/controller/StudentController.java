@@ -35,10 +35,14 @@ public class StudentController {
         return ResponseEntity.ok(subject);
     }
 
+/*    @GetMapping("/byStudent/{studentId}")*/
+
+
+
     @GetMapping("/byStudent/{studentId}")
-    public ResponseEntity<Map<String, Object>> getAll(@PathVariable("studentId") Long studentId){
-        Map<String, Object> datos = studentService.getAll(studentId);
-        return ResponseEntity.ok(datos);
+    public ResponseEntity<Map<String, Object>> getSubject(@PathVariable("studentId") Long studentId){
+//        Map<String, Object> datos = studentService.getAll(studentId);
+        return ResponseEntity.ok(studentService.getSubject(studentId));
     }
 
 }

@@ -13,7 +13,7 @@ public class SubjectService {
     @Autowired
     SubjectRepository subjectRepository;
 
-    public List<Subject> getAll(){
+    public List<Subject> getAllSubject(){
         return subjectRepository.findAll();
     }
 
@@ -22,7 +22,7 @@ public class SubjectService {
         return newSubject;
     }
 
-    public List<Subject> byStudentId(Long studentId){
+    public List<Subject> getSubject(Long studentId){
         return subjectRepository.findByStudentId(studentId);
     }
 

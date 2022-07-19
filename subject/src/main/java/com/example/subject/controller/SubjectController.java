@@ -16,13 +16,13 @@ public class SubjectController {
     SubjectService subjectService;
 
     @GetMapping
-    public List<Subject> getAll(){
-        return subjectService.getAll();
+    public List<Subject> getAllSubject(){
+        return subjectService.getAllSubject();
     }
 
     @GetMapping("/byStudent/{studentId}")
-    public ResponseEntity<List<Subject>> getAll(@PathVariable("studentId") Long studentId){
-        List<Subject> subject = subjectService.byStudentId(studentId);
+    public ResponseEntity<List<Subject>> getSubject(@PathVariable("studentId") Long studentId){
+        List<Subject> subject = subjectService.getSubject(studentId);
         return ResponseEntity.ok(subject);
 
     }

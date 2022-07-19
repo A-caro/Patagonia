@@ -13,6 +13,10 @@ import java.util.*;
 @Service
 public class StudentService {
 
+/*
+    @Autowired
+    RestTemplate restTemplate;*/
+
     @Autowired
     SubjectFeignClient subjectFeignClient;
 
@@ -33,14 +37,18 @@ public class StudentService {
         return subjectNew;
     }
 
-    public Map<String, Object> getAll(Long studentId){
+//    public List<Subject> getSubject(Long studentId) {
+//        List<Subject> subjects = restTemplate.getForObject("http://subject-service/subject/byStudent/" + studentId, List.class);
+//        return subjects;
+//    }
+
+    public Map<String, Object> getSubject(Long studentId){
         Map<String, Object> datos = new HashMap<>();
         Student student = studentRepository.findById(studentId).orElse(null);
         datos.put("Student", student);
-        List<Subject> subjects = subjectFeignClient.getAll(studentId);
+        List<Subject> subjects = subjectFeignClient.getSubject(studentId);
         datos.put("Subjects", subjects);
         return datos;
     }
-
 
 }
