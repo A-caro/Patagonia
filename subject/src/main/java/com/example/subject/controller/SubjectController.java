@@ -20,6 +20,13 @@ public class SubjectController {
         return subjectService.getAll();
     }
 
+    @GetMapping("/byStudent/{studentId}")
+    public ResponseEntity<List<Subject>> getAll(@PathVariable("studentId") Long studentId){
+        List<Subject> subject = subjectService.byStudentId(studentId);
+        return ResponseEntity.ok(subject);
+
+    }
+
     @PostMapping
     public ResponseEntity<Subject> saveSubject(@RequestBody Subject subject) {
         Subject subjectNew = subjectService.saveSubject(subject);

@@ -37,7 +37,7 @@ public class StudentService {
         Map<String, Object> datos = new HashMap<>();
         Student student = studentRepository.findById(studentId).orElse(null);
         datos.put("Student", student);
-        List<Subject> subjects = subjectFeignClient.getSubjects(studentId);
+        List<Subject> subjects = subjectFeignClient.getAll(studentId);
         datos.put("Subjects", subjects);
         return datos;
     }

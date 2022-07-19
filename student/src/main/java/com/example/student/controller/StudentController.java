@@ -35,7 +35,7 @@ public class StudentController {
         return ResponseEntity.ok(subject);
     }
 
-    @GetMapping("/getAll/{studentId}")
+    @GetMapping("/byStudent/{studentId}")
     public ResponseEntity<Map<String, Object>> getAll(@PathVariable("studentId") Long studentId){
         Map<String, Object> datos = studentService.getAll(studentId);
         return ResponseEntity.ok(datos);

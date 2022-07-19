@@ -22,9 +22,8 @@ public class SubjectService {
         return newSubject;
     }
 
-    /*public Subject saveSubject(Subject subject){
-        return subjectRepository.save(subject);
-    }*/
-
+    public List<Subject> byStudentId(Long studentId){
+        return subjectRepository.findByStudentId(studentId);
+    }
 
 }
