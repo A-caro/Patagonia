@@ -22,9 +22,10 @@ public class SubjectController {
 
     @PostMapping
     public ResponseEntity<Subject> saveSubject(@RequestBody Subject subject) {
-        subjectService.saveSubject(subject);
-        return ResponseEntity.ok(subject);
+        Subject subjectNew = subjectService.saveSubject(subject);
+        return ResponseEntity.ok(subjectNew);
     }
+
 
 
 

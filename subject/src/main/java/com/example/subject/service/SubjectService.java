@@ -17,13 +17,14 @@ public class SubjectService {
         return subjectRepository.findAll();
     }
 
-  /*  public Loan saveLoan(Loan loan){
-        Loan newloan = loanRepository.save(loan);
-        return newloan;
-    }*/
     public Subject saveSubject(Subject subject){
-        return subjectRepository.save(subject);
+        Subject newSubject = subjectRepository.save(subject);
+        return newSubject;
     }
+
+    /*public Subject saveSubject(Subject subject){
+        return subjectRepository.save(subject);
+    }*/
 
 
 }
