@@ -37,10 +37,6 @@ public class StudentService {
         return subjectNew;
     }
 
-//    public List<Subject> getSubject(Long studentId) {
-//        List<Subject> subjects = restTemplate.getForObject("http://subject-service/subject/byStudent/" + studentId, List.class);
-//        return subjects;
-//    }
 
     public Map<String, Object> getSubject(Long studentId){
         Map<String, Object> datos = new HashMap<>();

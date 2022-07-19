@@ -35,9 +35,6 @@ public class StudentController {
         return ResponseEntity.ok(subject);
     }
 
-/*    @GetMapping("/byStudent/{studentId}")*/
-
-
 
     @GetMapping("/byStudent/{studentId}")
     public ResponseEntity<Map<String, Object>> getSubject(@PathVariable("studentId") Long studentId){
