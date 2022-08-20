@@ -13,9 +13,7 @@ import java.util.*;
 @Service
 public class StudentService {
 
-/*
-    @Autowired
-    RestTemplate restTemplate;*/
+
 
     @Autowired
     SubjectFeignClient subjectFeignClient;

@@ -38,7 +38,6 @@ public class StudentController {
 
     @GetMapping("/byStudent/{studentId}")
     public ResponseEntity<Map<String, Object>> getSubject(@PathVariable("studentId") Long studentId){
-//        Map<String, Object> datos = studentService.getAll(studentId);
         return ResponseEntity.ok(studentService.getSubject(studentId));
     }
 
